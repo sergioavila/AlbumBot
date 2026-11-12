@@ -35,8 +35,8 @@ canonical if a wrapper command drifts from this table.
 
 | Metric | Baseline | Direction |
 | --- | --- | --- |
-| Project branch coverage | Pending pilot | Must not fall by more than 0.5 percentage points |
-| `make check-task` duration | Pending pilot | Must remain at or below 90 seconds |
+| Project branch coverage | 80% on 2026-11-11 | Must not fall by more than 0.5 percentage points |
+| `make check-task` duration | 3.2 seconds on 2026-11-11 | Must remain at or below 90 seconds |
 
 ## Lifecycle
 

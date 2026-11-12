@@ -4,8 +4,8 @@ Status: ready-for-agent
 
 ## Objective
 
-Finish the AlbumBot memory, handoff, and constraint foundation described in
-`spec.md`.
+The AlbumBot memory, handoff, and constraint foundation described in `spec.md`
+is complete.
 
 ## Completed
 
@@ -14,10 +14,17 @@ Finish the AlbumBot memory, handoff, and constraint foundation described in
 - Added domain memory, domain-doc rules, and ADR guidance.
 - Added local tracker, triage, specification, and issue conventions.
 - Added the quality bar, floor guard, and reproducible check commands.
+- Added API, floor-guard, adoption-gate, and OSV-gate tests.
+- Removed the unused vulnerable multipart dependency.
 
 ## Verification
 
-- Pending until issue 05.
+- `make check-task`: 8 tests passed, 80% branch coverage, 3.2-second pilot.
+- Gitleaks: no leaks.
+- Semgrep: 141 rules, no ERROR findings.
+- OSV Scanner: no high or critical vulnerabilities.
+- `make check-full`: passed.
+- Adoption-gate failure probe: converted exit 7 to a warning as expected.
 
 ## Decisions
 
@@ -30,8 +37,12 @@ Finish the AlbumBot memory, handoff, and constraint foundation described in
 
 ## Risks and blockers
 
-- Pilot tests, external security checks, and baseline measurements are pending.
+- The local pilot used macOS Python 3.9 and emitted end-of-life/OpenSSL
+  warnings. The application container remains Python 3.11 and should be used
+  for runtime parity.
+- The pinned FastAPI/HTTPX combination emits a TestClient deprecation warning.
+  It does not affect the current tests.
 
 ## Next ticket
 
-`.scratch/project-foundation/issues/05-pilot-verification.md`
+`.scratch/album-catalog/issues/01-define-album-model.md`

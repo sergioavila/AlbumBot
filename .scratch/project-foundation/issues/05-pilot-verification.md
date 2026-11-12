@@ -1,6 +1,6 @@
 # Run pilot verification
 
-Status: ready-for-agent
+Status: resolved
 
 Add minimal tests for existing behavior, measure the baseline, run all checks,
 and close the foundation effort with a complete handoff.
@@ -13,3 +13,7 @@ and close the foundation effort with a complete handoff.
 - The handoff names the next product ticket.
 
 ## Comments
+
+- Eight tests pass with 80% project branch coverage.
+- Full Gitleaks, Semgrep, and OSV checks pass.
+- `make check-task` completed in 3.2 seconds during the pilot.
