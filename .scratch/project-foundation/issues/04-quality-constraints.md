@@ -1,6 +1,6 @@
 # Enforce quality constraints
 
-Status: ready-for-agent
+Status: resolved
 
 Create the canonical quality bar, a diff-scoped floor guard, and reproducible
 commands for linting, types, coverage, and security.
@@ -12,3 +12,5 @@ commands for linting, types, coverage, and security.
 - Fast, task, and full checks are executable.
 
 ## Comments
+
+- Added the canonical constraints, Python floor guard, and Make targets.

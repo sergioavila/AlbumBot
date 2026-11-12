@@ -13,6 +13,7 @@ Finish the AlbumBot memory, handoff, and constraint foundation described in
 - Added reproducible development dependencies.
 - Added domain memory, domain-doc rules, and ADR guidance.
 - Added local tracker, triage, specification, and issue conventions.
+- Added the quality bar, floor guard, and reproducible check commands.
 
 ## Verification
 
@@ -23,11 +24,14 @@ Finish the AlbumBot memory, handoff, and constraint foundation described in
 - Local markdown is the issue tracker.
 - The repository is the canonical memory; conversation history is not.
 - Domain documentation uses a single context.
+- The floor blocks immediately. Numbered checks warn through 2026-11-25 and
+  block afterward.
+- Security gates use pinned containers; OSV blocks CVSS 7.0 and above.
 
 ## Risks and blockers
 
-- Quality checks and baseline measurements are not complete yet.
+- Pilot tests, external security checks, and baseline measurements are pending.
 
 ## Next ticket
 
-`.scratch/project-foundation/issues/04-quality-constraints.md`
+`.scratch/project-foundation/issues/05-pilot-verification.md`
